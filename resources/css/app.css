@@ -1,0 +1,117 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bg-gray-800 {
+  background-color: gray !important;
+}
+.bg-gray-800:hover {
+  background-color: rgb(56, 55, 55) !important;
+  color: #fff;
+}
+
+@media (max-width : 768px) {
+    .mobile{
+        position: absolute;
+        z-index: 999;
+        top: 2.5rem;
+    }
+}
+.btn-success {
+   background-color: green !important;
+   border: 1px solid green;
+   padding: .5rem;
+   color: #fff;
+}
+.btn-success:hover {
+  background-color: rgb(43, 187, 43) !important;
+  border: 1px solid  rgb(43, 187, 43);
+}
+.btn-danger {
+  background-color: red !important;
+  border: 1px solid red;
+  padding: .5rem;
+  margin: 2px;
+  color: #fff;
+}
+.btn-danger:hover {
+  background-color: rgb(228, 47, 47) !important;
+  border: 1px solid  rgb(228, 47, 47) ;
+}
+
+
+/* Fondo modal: negro con opacidad al 50% */
+.modal {
+    display: none; /* Por defecto, estará oculto */
+    position: fixed; /* Posición fija */
+    z-index: 999; /* Se situará por encima de otros elementos de la página*/
+    padding-top: 120px; /* El contenido estará situado a 200px de la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Algura completa */
+    overflow: auto; /* Se activará el scroll si es necesario */
+    background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */
+  }
+  
+  /* Ventana o caja modal */
+  .contenido-modal {
+    position: relative; /* Relativo con respecto al contenedor -modal- */
+    background-color: white;
+    margin: auto; /* Centrada */
+    padding: 20px;
+    width: 45%;
+    -webkit-animation-name: animarsuperior;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animarsuperior;
+    animation-duration: 0.5s
+  }
+  
+  @media (max-width : 768px) {
+    .contenido-modal {
+      width: 98%;
+    }
+    .modal {
+      padding-top: 90px;
+    }
+  }
+  
+  
+  /* Animación */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animarsuperior {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* Botón cerrar */
+  .close {
+    color: black;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .bg-gray-700 {
+    background-color: #c8c8c8 !important;
+    }
+  .bg-gray-700 :hover {
+    background-color: #a7a5a5 !important;
+  }
+
+a:hover {
+  text-decoration: none !important;
+}
